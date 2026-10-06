@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="ko">
   <head>
@@ -12,38 +11,79 @@
       content="작은 생각 조각들을 모아 글을 쓰고, 영상으로도 기록하는 다슬의 작은 아카이브입니다."
     />
 
-    <!-- Open Graph : Threads, 카카오톡, 페이스북 등 링크 미리보기 -->
+    <!-- =========================
+         링크 미리보기 / Open Graph
+    ========================== -->
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="다슬의 이야기" />
+
+    <meta
+      property="og:title"
+      content="다슬의 이야기"
+    />
+
     <meta
       property="og:description"
       content="작은 생각 조각들을 모아 글을 쓰고, 영상으로도 기록하는 다슬의 작은 아카이브입니다."
     />
+
     <meta
       property="og:image"
-      content="https://daseul-life.vercel.app/images/profile.jpg"
+      content="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
     />
+
+    <meta
+      property="og:image:secure_url"
+      content="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+    />
+
+    <meta
+      property="og:image:type"
+      content="image/jpeg"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="다슬의 이야기 대표 이미지"
+    />
+
     <meta
       property="og:url"
       content="https://daseul-life.vercel.app/"
     />
-    <meta property="og:site_name" content="다슬의 이야기" />
 
-    <!-- 이미지 크기 정보 -->
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="다슬의 이야기 대표 이미지" />
+    <meta
+      property="og:site_name"
+      content="다슬의 이야기"
+    />
 
-    <!-- Twitter / X 계열 미리보기 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="다슬의 이야기" />
+    <!-- =========================
+         X / Twitter 미리보기
+    ========================== -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="다슬의 이야기"
+    />
+
     <meta
       name="twitter:description"
       content="작은 생각 조각들을 모아 글을 쓰고, 영상으로도 기록하는 다슬의 작은 아카이브입니다."
     />
+
     <meta
       name="twitter:image"
-      content="https://daseul-life.vercel.app/images/profile.jpg"
+      content="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="다슬의 이야기 대표 이미지"
     />
 
     <style>
@@ -51,14 +91,18 @@
         --paper: #fff8ef;
         --paper-deep: #fff1e8;
         --paper-soft: #fffaf5;
+
         --ink: #4b403b;
         --muted: #8b7d75;
         --line: #ead9cf;
+
         --pink: #dca39d;
         --pink-deep: #c8847d;
+
         --sage: #a9c7a2;
         --sage-deep: #6f9770;
         --sage-soft: #eef6eb;
+
         --profile-beige: #e7c4a4;
 
         font-family:
@@ -83,6 +127,7 @@
       body {
         min-height: 100vh;
         margin: 0;
+
         color: var(--ink);
 
         background:
@@ -112,6 +157,10 @@
         text-decoration: none;
       }
 
+      img {
+        max-width: 100%;
+      }
+
       a,
       button {
         -webkit-tap-highlight-color: transparent;
@@ -120,8 +169,10 @@
       .page {
         width: 100%;
         min-height: 100vh;
+
         display: flex;
         justify-content: center;
+
         padding: 28px 18px 42px;
       }
 
@@ -132,24 +183,30 @@
 
       /* =========================
          HERO
-      ========================= */
+      ========================== */
 
       .hero {
         min-height: calc(100vh - 56px);
+
         display: grid;
         align-content: center;
         justify-items: center;
+
         padding: 14px 0 30px;
+
         text-align: center;
       }
 
       .profile-frame {
         width: 124px;
         height: 124px;
+
         display: grid;
         place-items: center;
+
         margin: 0 auto 20px;
         padding: 5px;
+
         overflow: hidden;
 
         border: 1px solid rgba(220, 163, 157, 0.54);
@@ -157,16 +214,16 @@
 
         background:
           linear-gradient(
-              var(--profile-beige),
-              var(--profile-beige)
-            )
-            padding-box,
+            var(--profile-beige),
+            var(--profile-beige)
+          )
+          padding-box,
           linear-gradient(
-              135deg,
-              rgba(220, 163, 157, 0.72),
-              rgba(169, 199, 162, 0.66)
-            )
-            border-box;
+            135deg,
+            rgba(220, 163, 157, 0.72),
+            rgba(169, 199, 162, 0.66)
+          )
+          border-box;
 
         box-shadow:
           0 16px 38px rgba(149, 112, 98, 0.13);
@@ -175,11 +232,13 @@
       .profile-image {
         width: 100%;
         height: 100%;
+
         display: block;
+
         border-radius: 50%;
 
         object-fit: cover;
-        object-position: center;
+        object-position: center top;
 
         background: var(--profile-beige);
 
@@ -189,6 +248,7 @@
 
       .name {
         margin: 0;
+
         font-size: 2.05rem;
         font-weight: 800;
         letter-spacing: 0;
@@ -196,9 +256,11 @@
 
       .intro {
         max-width: 330px;
+
         margin: 12px auto 0;
 
         color: var(--muted);
+
         font-size: 1rem;
         line-height: 1.75;
 
@@ -208,7 +270,9 @@
       .hero-divider {
         width: 72px;
         height: 1px;
+
         margin: 24px auto;
+
         background: var(--line);
       }
 
@@ -216,6 +280,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         gap: 10px;
 
         width: 100%;
@@ -245,30 +310,24 @@
 
       .primary-note {
         margin: 10px 0 0;
+
         color: var(--muted);
+
         font-size: 0.92rem;
         line-height: 1.55;
-        word-break: keep-all;
-      }
 
-      .primary-link:hover,
-      .primary-link:focus-visible,
-      .link-card:hover,
-      .link-card:focus-visible,
-      .sentence-card:hover,
-      .sentence-card:focus-visible,
-      .story-card:hover,
-      .story-card:focus-visible {
-        transform: translateY(-2px);
+        word-break: keep-all;
       }
 
       /* =========================
          SECTION
-      ========================= */
+      ========================== */
 
       .section {
         width: 100%;
+
         padding: 30px 0;
+
         border-top: 1px solid var(--line);
       }
 
@@ -276,26 +335,31 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         gap: 8px;
 
         margin: 0 0 16px;
 
         color: var(--pink-deep);
+
         font-size: 1.15rem;
         font-weight: 800;
+
         text-align: center;
       }
 
       /* =========================
          ABOUT
-      ========================= */
+      ========================== */
 
       .about-text {
         display: grid;
         gap: 12px;
 
         color: #62544e;
+
         text-align: center;
+
         word-break: keep-all;
       }
 
@@ -304,22 +368,26 @@
       }
 
       /* =========================
-         STORY IMAGE CARDS
-      ========================= */
+         STORY CARDS
+      ========================== */
 
       .story-grid {
+        width: 100%;
+
         display: grid;
         gap: 14px;
       }
 
       .story-card {
         display: block;
+
         overflow: hidden;
 
         border: 1px solid rgba(234, 217, 207, 0.92);
         border-radius: 22px;
 
-        background: rgba(255, 253, 249, 0.72);
+        background:
+          rgba(255, 253, 249, 0.72);
 
         box-shadow:
           0 10px 25px rgba(149, 112, 98, 0.06);
@@ -332,7 +400,10 @@
 
       .story-card:hover,
       .story-card:focus-visible {
-        border-color: rgba(220, 163, 157, 0.7);
+        transform: translateY(-2px);
+
+        border-color:
+          rgba(220, 163, 157, 0.7);
 
         box-shadow:
           0 14px 30px rgba(149, 112, 98, 0.1);
@@ -340,20 +411,25 @@
 
       .story-image-wrap {
         width: 100%;
+
         aspect-ratio: 16 / 9;
+
         overflow: hidden;
+
         background: var(--paper-deep);
       }
 
       .story-image {
         width: 100%;
         height: 100%;
+
         display: block;
 
         object-fit: cover;
-        object-position: center;
+        object-position: center top;
 
-        transition: transform 300ms ease;
+        transition:
+          transform 300ms ease;
       }
 
       .story-card:hover .story-image,
@@ -367,15 +443,18 @@
 
       .story-copy strong {
         display: block;
+
         font-size: 1.02rem;
         line-height: 1.45;
       }
 
       .story-copy span {
         display: block;
+
         margin-top: 5px;
 
         color: var(--muted);
+
         font-size: 0.83rem;
         line-height: 1.5;
 
@@ -386,35 +465,54 @@
         margin: 14px 0 0;
 
         color: var(--muted);
+
         font-size: 0.8rem;
+
         text-align: center;
       }
 
       /* =========================
          LINK CARDS
-      ========================= */
+      ========================== */
 
       .link-list,
       .sentence-grid {
         width: 100%;
+
         display: grid;
         gap: 12px;
+
         margin: 0 auto;
       }
 
       .link-card {
         display: grid;
-        grid-template-columns: 44px 1fr 20px;
+
+        grid-template-columns:
+          44px
+          1fr
+          20px;
+
         align-items: center;
+
         gap: 14px;
 
         min-height: 66px;
-        padding: 12px 14px 12px 12px;
 
-        border: 1px solid rgba(234, 217, 207, 0.92);
+        padding:
+          12px
+          14px
+          12px
+          12px;
+
+        border:
+          1px solid
+          rgba(234, 217, 207, 0.92);
+
         border-radius: 20px;
 
-        background: rgba(255, 253, 249, 0.52);
+        background:
+          rgba(255, 253, 249, 0.52);
 
         transition:
           transform 160ms ease,
@@ -425,7 +523,8 @@
       .link-card.featured {
         min-height: 76px;
 
-        border-color: rgba(220, 163, 157, 0.62);
+        border-color:
+          rgba(220, 163, 157, 0.62);
 
         background:
           linear-gradient(
@@ -435,11 +534,13 @@
           );
 
         box-shadow:
-          0 14px 30px rgba(200, 132, 125, 0.12);
+          0 14px 30px
+          rgba(200, 132, 125, 0.12);
       }
 
       .link-card.youtube {
-        border-color: rgba(220, 163, 157, 0.48);
+        border-color:
+          rgba(220, 163, 157, 0.48);
 
         background:
           linear-gradient(
@@ -449,15 +550,15 @@
           );
       }
 
-      .link-card.youtube .icon {
-        color: var(--pink-deep);
-        background: #fff0ec;
-      }
-
       .link-card:hover,
       .link-card:focus-visible {
-        border-color: rgba(220, 163, 157, 0.7);
-        background: rgba(255, 253, 249, 0.88);
+        transform: translateY(-2px);
+
+        border-color:
+          rgba(220, 163, 157, 0.7);
+
+        background:
+          rgba(255, 253, 249, 0.88);
       }
 
       .icon {
@@ -470,19 +571,25 @@
         border-radius: 15px;
 
         color: var(--pink-deep);
-        background: var(--paper-deep);
+
+        background:
+          var(--paper-deep);
 
         font-weight: 800;
       }
 
       .icon.sage {
         color: var(--sage-deep);
-        background: var(--sage-soft);
+
+        background:
+          var(--sage-soft);
       }
 
       .icon.youtube-icon {
         color: var(--pink-deep);
-        background: #fff0ec;
+
+        background:
+          #fff0ec;
       }
 
       .icon svg {
@@ -496,19 +603,24 @@
 
       .link-copy strong {
         display: block;
+
         font-size: 1rem;
         line-height: 1.35;
       }
 
-      .link-card.featured .link-copy strong {
+      .link-card.featured
+      .link-copy
+      strong {
         font-size: 1.08rem;
       }
 
       .link-copy span {
         display: block;
+
         margin-top: 2px;
 
         color: var(--muted);
+
         font-size: 0.82rem;
         line-height: 1.45;
 
@@ -517,28 +629,38 @@
 
       .arrow {
         color: #b7a8a0;
+
         font-size: 1.2rem;
       }
 
       /* =========================
          YOUTUBE
-      ========================= */
+      ========================== */
 
       .watch-intro {
-        margin: -4px 8px 14px;
+        margin:
+          -4px
+          8px
+          14px;
 
         color: var(--muted);
+
         font-size: 0.9rem;
         line-height: 1.65;
 
         text-align: center;
+
         word-break: keep-all;
       }
 
       .watch-note {
-        margin: 10px 4px 0;
+        margin:
+          10px
+          4px
+          0;
 
         color: var(--muted);
+
         font-size: 0.78rem;
         line-height: 1.55;
 
@@ -547,18 +669,26 @@
 
       /* =========================
          SENTENCES
-      ========================= */
+      ========================== */
 
       .sentence-card {
         display: block;
+
         width: 100%;
 
-        padding: 19px 18px 18px;
+        padding:
+          19px
+          18px
+          18px;
 
-        border: 1px solid rgba(234, 217, 207, 0.9);
+        border:
+          1px solid
+          rgba(234, 217, 207, 0.9);
+
         border-radius: 22px;
 
-        background: rgba(255, 253, 249, 0.48);
+        background:
+          rgba(255, 253, 249, 0.48);
 
         text-align: center;
 
@@ -570,16 +700,23 @@
 
       .sentence-card:hover,
       .sentence-card:focus-visible {
-        border-color: rgba(220, 163, 157, 0.68);
-        background: rgba(255, 253, 249, 0.84);
+        transform: translateY(-2px);
+
+        border-color:
+          rgba(220, 163, 157, 0.68);
+
+        background:
+          rgba(255, 253, 249, 0.84);
       }
 
       .sentence-card blockquote {
         margin: 0;
 
         color: #5b4d48;
+
         font-size: 1rem;
         font-weight: 700;
+
         line-height: 1.68;
 
         word-break: keep-all;
@@ -587,42 +724,50 @@
 
       .sentence-card span {
         display: block;
+
         margin-top: 12px;
 
         color: var(--muted);
+
         font-size: 0.82rem;
       }
 
       /* =========================
-         CONNECT
-      ========================= */
+         FOOTER
+      ========================== */
 
       .footer {
         padding: 28px 0 0;
 
-        border-top: 1px solid var(--line);
+        border-top:
+          1px solid
+          var(--line);
 
         color: var(--muted);
 
         text-align: center;
+
         font-size: 0.94rem;
       }
 
       /* =========================
-         ACCESSIBILITY
-      ========================= */
+         FOCUS
+      ========================== */
 
       .primary-link:focus-visible,
       .link-card:focus-visible,
       .sentence-card:focus-visible,
       .story-card:focus-visible {
-        outline: 3px solid rgba(220, 163, 157, 0.34);
+        outline:
+          3px solid
+          rgba(220, 163, 157, 0.34);
+
         outline-offset: 3px;
       }
 
       /* =========================
          DESKTOP
-      ========================= */
+      ========================== */
 
       @media (min-width: 720px) {
         .page {
@@ -632,6 +777,7 @@
 
         .hero {
           min-height: auto;
+
           padding-top: 18px;
           padding-bottom: 36px;
         }
@@ -641,4 +787,673 @@
         }
       }
     </style>
-```
+  </head>
+
+  <body>
+    <main class="page">
+      <div class="shell">
+
+        <!-- =====================
+             HERO
+        ====================== -->
+
+        <header class="hero">
+
+          <div class="profile-frame">
+            <img
+              class="profile-image"
+              src="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+              alt="다슬 대표 사진"
+              draggable="false"
+            />
+          </div>
+
+          <h1 class="name">
+            다슬
+          </h1>
+
+          <p class="intro">
+            작은 생각 조각들을 모아 글을 씁니다.<br />
+            이곳은 제가 남긴 기록들을 모아둔 공간입니다. 🌿
+          </p>
+
+          <div
+            class="hero-divider"
+            aria-hidden="true"
+          ></div>
+
+          <a
+            class="primary-link"
+            href="https://brunch.co.kr/brunchbook/writedaseul365"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>📚</span>
+            <span>다슬 이야기</span>
+          </a>
+
+          <p class="primary-note">
+            다슬의 대표 글과 기록을 모아둔 공간
+          </p>
+
+        </header>
+
+
+        <!-- =====================
+             ABOUT
+        ====================== -->
+
+        <section
+          class="section"
+          aria-labelledby="about-title"
+        >
+
+          <h2
+            class="section-title"
+            id="about-title"
+          >
+            About Me
+          </h2>
+
+          <div class="about-text">
+
+            <p>
+              안녕하세요. 브런치에서 감성 에세이와 소설을 쓰는 다슬입니다.
+            </p>
+
+            <p>
+              스쳐 지나가는 마음과 일상의 순간들을 글로 남깁니다.
+            </p>
+
+            <p>
+              이곳은 제가 좋아하는 이야기와 기록들이 머무는 작은 공간입니다.
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================
+             READ
+        ====================== -->
+
+        <section
+          class="section"
+          aria-labelledby="read-title"
+        >
+
+          <h2
+            class="section-title"
+            id="read-title"
+          >
+            📚 Read
+          </h2>
+
+
+          <!-- 대표 글 이미지 -->
+
+          <div class="story-grid">
+
+            <a
+              class="story-card"
+              href="https://brunch.co.kr/@daseul365/22"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="story-image-wrap">
+
+                <img
+                  class="story-image"
+                  src="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+                  alt="다슬의 글 대표 이미지"
+                  loading="lazy"
+                />
+
+              </div>
+
+              <div class="story-copy">
+
+                <strong>
+                  하루를 지나오며 마음에 남은 장면
+                </strong>
+
+                <span>
+                  다슬이 일상에서 건져 올린 마음의 기록
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              class="story-card"
+              href="https://brunch.co.kr/@daseul365/182"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="story-image-wrap">
+
+                <img
+                  class="story-image"
+                  src="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+                  alt="다슬의 에세이 대표 이미지"
+                  loading="lazy"
+                />
+
+              </div>
+
+              <div class="story-copy">
+
+                <strong>
+                  좋아하는 마음과 흔들리는 마음 사이
+                </strong>
+
+                <span>
+                  글을 계속 붙잡아 보는 다슬의 이야기
+                </span>
+
+              </div>
+
+            </a>
+
+
+            <a
+              class="story-card"
+              href="https://brunch.co.kr/@daseul365/176"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="story-image-wrap">
+
+                <img
+                  class="story-image"
+                  src="https://raw.githubusercontent.com/daseul-life/daseul-life/main/images/profile.jpg"
+                  alt="다슬의 글 대표 이미지"
+                  loading="lazy"
+                />
+
+              </div>
+
+              <div class="story-copy">
+
+                <strong>
+                  지나간 감정도 다시 바라보면
+                </strong>
+
+                <span>
+                  마음에 남은 순간을 하나의 문장으로 기록합니다.
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <p class="story-more">
+            사진과 함께 천천히 채워가는 다슬의 기록입니다. 🌿
+          </p>
+
+
+          <div
+            class="link-list"
+            style="margin-top: 16px;"
+          >
+
+            <a
+              class="link-card featured"
+              href="https://brunch.co.kr/brunchbook/writedaseul365"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span
+                class="icon"
+                aria-hidden="true"
+              >
+                📚
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  다슬 이야기
+                </strong>
+
+                <span>
+                  다슬의 대표 글과 기록을 모아둔 공간
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+
+            <a
+              class="link-card"
+              href="https://brunch.co.kr/@daseul365"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span
+                class="icon"
+                aria-hidden="true"
+              >
+                📖
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  브런치
+                </strong>
+
+                <span>
+                  감성 에세이와 소설을 읽는 곳
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+
+            <a
+              class="link-card"
+              href="https://m.blog.naver.com/rhduthd5914"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span
+                class="icon sage"
+                aria-hidden="true"
+              >
+                ✍️
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  블로그
+                </strong>
+
+                <span>
+                  일상의 기록과 소식을 모아두는 곳
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================
+             WATCH
+        ====================== -->
+
+        <section
+          class="section"
+          aria-labelledby="watch-title"
+        >
+
+          <h2
+            class="section-title"
+            id="watch-title"
+          >
+            📺 Watch
+          </h2>
+
+          <p class="watch-intro">
+            글로 남기던 이야기를<br />
+            이번에는 영상으로 천천히 기록합니다.
+          </p>
+
+          <div class="link-list">
+
+            <a
+              class="link-card youtube"
+              href="https://www.youtube.com/@%EB%8B%A4%EC%8A%AC%EA%B0%90%EC%84%B1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="다슬감성 YouTube 채널 열기"
+            >
+
+              <span
+                class="icon youtube-icon"
+                aria-hidden="true"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+
+                  <path
+                    d="M21.2 7.2C21 6.45 20.4 5.86 19.65 5.65C18.3 5.3 12 5.3 12 5.3C12 5.3 5.7 5.3 4.35 5.65C3.6 5.86 3 6.45 2.8 7.2C2.45 8.55 2.45 12 2.45 12C2.45 12 2.45 15.45 2.8 16.8C3 17.55 3.6 18.14 4.35 18.35C5.7 18.7 12 18.7 12 18.7C12 18.7 18.3 18.7 19.65 18.35C20.4 18.14 21 17.55 21.2 16.8C21.55 15.45 21.55 12 21.55 12C21.55 12 21.55 8.55 21.2 7.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M10 9.2L15 12L10 14.8V9.2Z"
+                    fill="currentColor"
+                  />
+
+                </svg>
+
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  다슬감성
+                </strong>
+
+                <span>
+                  다슬의 이야기를 영상으로 만나는 곳
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+          </div>
+
+          <p class="watch-note">
+            앞으로 하나씩 영상을 채워갈 예정입니다. 🌿
+          </p>
+
+        </section>
+
+
+        <!-- =====================
+             SENTENCES
+        ====================== -->
+
+        <section
+          class="section"
+          aria-labelledby="sentences-title"
+        >
+
+          <h2
+            class="section-title"
+            id="sentences-title"
+          >
+            다슬이 건네는 문장
+          </h2>
+
+          <div class="sentence-grid">
+
+            <a
+              class="sentence-card"
+              href="https://brunch.co.kr/@daseul365/22"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <blockquote>
+                “하루를 지나오며 마음에 남은 장면을 조용히 꺼내봅니다.”
+              </blockquote>
+
+              <span>
+                브런치 에세이 22
+              </span>
+
+            </a>
+
+
+            <a
+              class="sentence-card"
+              href="https://brunch.co.kr/@daseul365/182"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <blockquote>
+                “좋아하는 마음과 흔들리는 마음 사이에서,
+                글을 계속 붙잡아 봅니다.”
+              </blockquote>
+
+              <span>
+                브런치 에세이 182
+              </span>
+
+            </a>
+
+
+            <a
+              class="sentence-card"
+              href="https://brunch.co.kr/@daseul365/176"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <blockquote>
+                “지나간 감정도 다시 바라보면 하나의 문장이 됩니다.”
+              </blockquote>
+
+              <span>
+                브런치 에세이 176
+              </span>
+
+            </a>
+
+
+            <a
+              class="sentence-card"
+              href="https://brunch.co.kr/@daseul365/171"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <blockquote>
+                “익숙한 일상 속에서 낯선 마음을 발견하는 순간을 기록합니다.”
+              </blockquote>
+
+              <span>
+                브런치 에세이 171
+              </span>
+
+            </a>
+
+
+            <a
+              class="sentence-card"
+              href="https://brunch.co.kr/@daseul365/189"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <blockquote>
+                “새로운 문 앞에서 망설이다가도,
+                결국 한 걸음 내딛는 마음을 씁니다.”
+              </blockquote>
+
+              <span>
+                브런치 에세이 189
+              </span>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================
+             CONNECT
+        ====================== -->
+
+        <section
+          class="section"
+          aria-labelledby="connect-title"
+        >
+
+          <h2
+            class="section-title"
+            id="connect-title"
+          >
+            🌿 Connect
+          </h2>
+
+          <div class="link-list">
+
+            <a
+              class="link-card"
+              href="https://www.threads.com/@write_daseul?invite=0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span
+                class="icon"
+                aria-hidden="true"
+              >
+                🧵
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  Threads
+                </strong>
+
+                <span>
+                  짧게 떠오른 마음을 나누는 곳
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+
+            <a
+              class="link-card"
+              href="https://www.instagram.com/write_daseul?igsh=MWd3d3B6ZmM1d3BsZg=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <span
+                class="icon"
+                aria-hidden="true"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+
+                  <rect
+                    x="4"
+                    y="4"
+                    width="16"
+                    height="16"
+                    rx="5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3.4"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+
+                  <circle
+                    cx="16.8"
+                    cy="7.3"
+                    r="1"
+                    fill="currentColor"
+                  />
+
+                </svg>
+
+              </span>
+
+              <span class="link-copy">
+
+                <strong>
+                  Instagram
+                </strong>
+
+                <span>
+                  글과 일상의 장면을 남기는 곳
+                </span>
+
+              </span>
+
+              <span
+                class="arrow"
+                aria-hidden="true"
+              >
+                ›
+              </span>
+
+            </a>
+
+          </div>
+
+        </section>
+
+
+        <!-- =====================
+             FOOTER
+        ====================== -->
+
+        <footer class="footer">
+          작은 생각을 기록합니다. ✍️
+        </footer>
+
+      </div>
+    </main>
+  </body>
+</html>
